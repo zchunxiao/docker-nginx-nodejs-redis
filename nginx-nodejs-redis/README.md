@@ -107,10 +107,10 @@ $ docker compose down
 ```
 
 
-![server.js中reids](./image.png)
+![server.js中reids](./images/image.png)
 
 
-![服务名自动注册为主机名](./image1.png)
+![服务名自动注册为主机名](./images/image1.png)
 
 
 (源码)[https://github.com/docker/awesome-compose/]
