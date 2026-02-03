@@ -111,3 +111,34 @@ $ docker compose down
 
 
 ![服务名自动注册为主机名](./image1.png)
+
+
+
+# server.js
+```
+server {
+  listen 80;
+  # 匹配的域名（核心），可写多个，用空格分隔
+  server_name localhost; 
+  location / {
+    proxy_pass http://loadbalancer;
+  }
+}
+```
+server_name localhost; 只匹配 Host: localhost 的请求
+
+|配置|含义|匹配请求|
+|----|----|--------|
+|server_name localhost;|只匹配 Host 为 localhost 的请求|http://localhost|
+|server_name 192.168.1.100;|只匹配 Host 为 192.168.1.100 的请求|http://192.168.1.100|
+|server_name _;|匹配所有未匹配的请求（默认 server）|所有请求|
+|不设置 server_name|匹配所有请求|所有请求|
+## 使用默认 server（推荐）
+```
+  server {
+      listen 80 default_server;  # 添加 default_server
+      server_name _;              # _ 是通配符，匹配所有未匹配的请求
+      # 或者直接省略 server_name
+  }
+```
+
