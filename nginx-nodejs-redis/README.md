@@ -112,8 +112,6 @@ $ docker compose down
 
 ![服务名自动注册为主机名](./images/image1.png)
 
-
-(源码)[https://github.com/docker/awesome-compose/]
 [源码](https://github.com/docker/awesome-compose/)
 
 # server.js
