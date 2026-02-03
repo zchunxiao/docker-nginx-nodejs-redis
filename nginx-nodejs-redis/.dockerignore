@@ -1,0 +1,38 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+*.md
+
+# Images
+images/
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.yml
+docker-compose.yaml
+compose.yaml
+.dockerignore
+
+# Environment
+.env
+.env.local
+.env.*.local
+

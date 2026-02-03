@@ -106,3 +106,8 @@ web2: Total number of visits is: 3
 $ docker compose down
 ```
 
+
+![server.js中reids](./image.png)
+
+
+![服务名自动注册为主机名](./image1.png)

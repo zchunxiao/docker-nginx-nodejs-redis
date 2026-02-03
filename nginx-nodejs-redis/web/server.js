@@ -4,7 +4,7 @@ const app = express();
 const redis = require('redis');
 const redisClient = redis.createClient({
   host: 'redis',
-  port: 6379
+  port: 6379   // ← 这是容器内部的端口，不是主机端口
 });
 
 app.get('/', function(req, res) {
@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
             numVisitsToDisplay = 1;
         }
        res.send(os.hostname() +': Number of visits is: ' + numVisitsToDisplay);
-        numVisits++;
+        // numVisits++; // 在第12行已经加了
         redisClient.set('numVisits', numVisits);
     });
 });
